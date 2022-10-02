@@ -21,6 +21,7 @@
     padding-top:100px;
     padding-bottom:100px;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
@@ -69,3 +70,34 @@
     border-bottom: solid 1px white;
 }
 
+.play-button, .delete-button, .harmoize-button {
+    width: 80px;
+    height: 27px;
+    float: left;
+    background: #0000009e;
+    transform: scale(1.5);
+    border-radius: 6px;
+    margin-left: 50px;
+    text-align: left;
+    text-align: center;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.action-buttons{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 100px;
+    width: 80%;
+    
+}
+
+.harmonize-button {
+    transform: scale(2);
+    border-radius: 5px;
+    font-weight: bold;
+    background: #083108eb;
+    margin-right: 60px;
+    cursor: not-allowed;
+    _opacity: .9;
+}

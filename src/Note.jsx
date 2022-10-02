@@ -6,6 +6,9 @@ function Note(props) {
 
     const popNoteIconTrigger = () => {
         SetPopNoteIcon(!popNoteIcon)
+        var audio = new Audio(props.sound);
+        audio.play();
+        props.addNote(props.index)
     }
 
     return (<>
