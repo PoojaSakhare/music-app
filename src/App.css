@@ -1,38 +1,71 @@
-.App {
-  text-align: center;
+.App{
+    background-image: url('../public/bg.jpg');
+    background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+  opacity: .7;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.stringsWrapper{
+   
+    color: white;
+    margin: 10%;
+    border-radius: 100px;
+    display: grid;
+    grid-template-columns: repeat(8, 100px);
+    flex-wrap: wrap;
+    width: 893px;
+    margin-left: -41px;
+}
+.wrapper{
+    padding-top:100px;
+    padding-bottom:100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.nodeBox{
+    _background-color: #7D6E83;
+    min-width:100px;
+    min-height: 20px;
+    border-right: solid 2px #fff;
+    border-top: solid 1px #fff;
+    
+}
+.nodeBox:hover {
+   background-color: #1110102b ;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.nodeboxesHolder{
+    height: 300px;
+    background: #7D6E83;
+    display: flex;
+    align-items: center;
+    border-radius: 50px;
 }
 
-.App-link {
-  color: #61dafb;
+#music {
+    height: 400px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.musical-note{
+    width: 43px;
+    margin-left: 52px;
+    position: absolute;
 }
+
+.strings {
+    position: absolute;
+    z-index: 99;
+    width: 892px;
+}
+
+.strings hr {
+    margin-bottom: 20px;
+}
+
+.bottom-border {
+    border-bottom: solid 1px white;
+}
+

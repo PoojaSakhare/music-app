@@ -1,23 +1,28 @@
-import logo from './logo.svg';
 import './App.css';
+import Note from './Note';
 
 function App() {
+
+  const notes = [...Array(88).keys()];
+  var audio = new Audio("https://storage.googleapis.com/magentadata/js/checkpoints/music_vae/drums_2bar_nade_9_q2");
+  console.log(audio.play());
+ 
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+     
+      <div className='wrapper'>
+        <div className='nodeboxesHolder'>
+         
+    
+          <img id='music' src='/note.png' />
+          <div className='stringsWrapper'>
+       
+            {notes.map((ele, i) => {
+             return <Note index={i}/>
+            })}
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
