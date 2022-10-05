@@ -1,23 +1,40 @@
-import React, {useState} from "react";
+import React, {useEffect, useState, forwardRef, useImperativeHandle} from "react";
 
-function Note(props) {
+import {notesData} from './data';
+
+const Note = forwardRef((props, ref) => {
 
     const [popNoteIcon, SetPopNoteIcon] = useState(false);
 
+    useImperativeHandle(ref, () => ({
+        callChildFunction(){
+            SetPopNoteIcon(!popNoteIcon);
+        }
+    }))
+
+    useEffect(() => {
+        console.log("changd", props.note.active)
+        SetPopNoteIcon(props.note.active)
+    },[props.note.active])
+
     const popNoteIconTrigger = () => {
-        SetPopNoteIcon(!popNoteIcon)
-        var audio = new Audio(props.sound);
-        audio.play();
-        props.addNote(props.index)
+        if (!popNoteIcon) {
+            SetPopNoteIcon(!popNoteIcon)
+            props.addNote(props.index)
+        }
+        else{
+            SetPopNoteIcon(!popNoteIcon)
+            props.removeNote(props.index)
+        }
     }
 
     return (<>
         <div style={{ display: "flex" }}>
             <div className={`nodeBox ${props.index>79 ? 'bottom-border': ''}`} onClick={popNoteIconTrigger}>
-                {popNoteIcon && <img className='musical-note' src='/musical-note.png' />}
+                { popNoteIcon && <img className='musical-note' src='/musical-note.png' />}
             </div>
         </div>
     </>);
-}
+})
 
 export default Note;
