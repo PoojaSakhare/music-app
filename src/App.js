@@ -95,8 +95,8 @@ function App() {
         </div>
         <div className='action-buttons'>
           <div>
-            <button className='delete-button' onClick={() => { userClickedNotes = []; window.location.reload(false); }}>🗑️ Delete</button>
-            <button className='play-button' onClick={playAllNotes}>▷ Play</button>
+            <button className='delete-button' onClick={() => { userClickedNotes = []; window.location.reload(false); }}>🗑️</button>
+            <button className='play-button' onClick={playAllNotes}>▷ </button>
           </div>
           <div>
             <button className='harmonize-button'>Harmonize</button>
