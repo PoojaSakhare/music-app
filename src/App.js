@@ -32,7 +32,7 @@ function App() {
     let exists = false;
     let existingNote;
 
-    audio.src = audios[0]
+    audio.src = audios[noteIndex % 8]
     audio.play();
 
     Object.entries(NOTES).forEach(
@@ -66,8 +66,8 @@ function App() {
     audio.onended = function () {
       if (index < userClickedNotes.length) {
         //TODO: Uncomment this when all audios are added 
-        // audio.src = audios[userClickedNotes[index].index % 8]
-        audio.src = audios[0]
+        audio.src = audios[userClickedNotes[index].index % 8]
+        // audio.src = audios[0]
         audio.play();
         index++;
       }
