@@ -32,6 +32,9 @@ function App() {
     let exists = false;
     let existingNote;
 
+    audio.src = audios[0]
+    audio.play();
+
     Object.entries(NOTES).forEach(
       ([key, note]) => {
         if (note.column === NOTES[noteIndex].column && note.active === true) { exists = true; existingNote = note; note.active = false }
@@ -57,6 +60,7 @@ function App() {
 
   const playAllNotes = () => {
     let index = 1;
+    var audio = new Audio(sound1);
     audio.src = audios[0]
     audio.play();
     audio.onended = function () {
