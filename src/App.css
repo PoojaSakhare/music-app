@@ -1,10 +1,10 @@
 .App{
-    background-image: url('../public/bg.jpg');
+    background-color: #F7E2E2;
     background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: 100% 100%;
   opacity: .7;
-  height: 670px;
+  height: 753px;
 }
 
 .stringsWrapper{
@@ -30,9 +30,10 @@
 .nodeBox{
     _background-color: #7D6E83;
     min-width:100px;
-    min-height: 20px;
-    border-right: solid 2px #fff;
-    border-top: solid 1px #fff;
+    min-height: 9px;
+    _border-right: solid 2px black;
+    border-top: solid 1px  black;
+    box-shadow: 0px 0px 8px 0px #dbbca1c9;
     
 }
 .nodeBox:hover {
@@ -41,10 +42,11 @@
 
 .nodeboxesHolder{
     height: 300px;
-    background: #7D6E83;
+    background: #fff;
     display: flex;
     align-items: center;
     border-radius: 50px;
+    box-shadow: 1px 1px 8px 0px #111110c9;
 }
 
 #music {
@@ -52,8 +54,8 @@
 }
 
 .musical-note{
-    width: 43px;
-    margin-left: 52px;
+    width: 14px;
+    margin-left: 87px;
     position: absolute;
 }
 
@@ -68,28 +70,37 @@
 }
 
 .bottom-border {
-    border-bottom: solid 1px white;
+    _border-bottom: solid 1px black;
+}
+
+.top-border{
+    border-top: none ;
 }
 
 .play-button, .delete-button, .harmoize-button {
-    width: 80px;
-    height: 27px;
+    width: 40px;
+    height: 38px;
     float: left;
-    background: #0000009e;
+    background: #61A4BC;
     transform: scale(1.5);
     border-radius: 6px;
-    margin-left: 50px;
+    margin-left: 30px;
     text-align: left;
+    font-size: 17px;
     text-align: center;
     font-weight: 700;
     cursor: pointer;
+}
+
+.play-button {
+    font-size: 20px;
 }
 
 .action-buttons{
     display: flex;
     justify-content: space-between;
     margin-top: 100px;
-    width: 80%;
+    width: 56%;
     
 }
 
@@ -97,8 +108,14 @@
     transform: scale(2);
     border-radius: 5px;
     font-weight: bold;
-    background: #083108eb;
+    background: #5B7DB1;
     margin-right: 60px;
     cursor: not-allowed;
     _opacity: .9;
+    height: 36px;
+    width: 100px;
+}
+
+.border-top{
+    border-top: none; 
 }

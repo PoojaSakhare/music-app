@@ -30,7 +30,8 @@ const Note = forwardRef((props, ref) => {
 
     return (<>
         <div style={{ display: "flex" }}>
-            <div className={`nodeBox ${props.index>79 ? 'bottom-border': ''}`} onClick={popNoteIconTrigger}>
+            {/* {props.index} */}
+            <div className={`nodeBox ${props.index>79 ? 'bottom-border': ''} ${props.index<16? 'border-top': ''} ${props.index>79 ? 'top-border': ''} `} onClick={popNoteIconTrigger}>
                 { popNoteIcon && <img className='musical-note' src='/musical-note.png' />}
             </div>
         </div>
