@@ -60,7 +60,7 @@ function App() {
 
   const playAllNotes = () => {
     let index = 1;
-    var audio = new Audio(sound1);
+    var audio = new Audio();
     audio.src = audios[0]
     audio.play();
     audio.onended = function () {
@@ -74,7 +74,7 @@ function App() {
     };
   }
 
-  var audio = new Audio(sound1);
+  var audio = new Audio();
 
   return (
     <div className="App">
@@ -88,6 +88,7 @@ function App() {
         <source src={sound1} />
       </audio>
       <div className='wrapper'>
+      <p style={{position:'fixed', zIndex:'1000', fontSize:'smaller', paddingTop: '30px'}}>NOTE: Add Notes left to right</p>
         <div className='nodeboxesHolder'>
           <img id='music' src='/note.png' alt='musicIcon' />
           <div className='stringsWrapper'>
