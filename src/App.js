@@ -1,5 +1,5 @@
 import './App.css';
-import { useEffect, useRef } from 'react';
+import { useRef, useState } from 'react';
 import { notesData } from './data';
 
 import Note from './Note';
@@ -11,6 +11,9 @@ import sound5 from './samples/E4.mp3'
 import sound6 from './samples/E4.ogg'
 import sound7 from './samples/G3.mp3'
 import sound8 from './samples/G3.ogg'
+import sound9 from './samples/G3.ogg'
+import sound10 from './samples/G3.ogg'
+import sound11 from './samples/G3.ogg'
 
 const NOTES = notesData;
 
@@ -18,7 +21,10 @@ function App() {
   const ChildRef = useRef();
   const audioRef = useRef();
   const notes = [...Array(88).keys()];
-  const audios = [sound1, sound2, sound3, sound4, sound5, sound6, sound7, sound8]
+  const audios = [sound1, sound2, sound3, sound4, sound5, sound6, sound7, sound8, sound9, sound10, sound11]
+  const userPlayedAudio = [null, null, null,null, null, null,null, null, null,null, null]
+
+  const [pitchText, setPitchText] = useState('');
 
   let userClickedNotes = [];
 
@@ -32,8 +38,11 @@ function App() {
     let exists = false;
     let existingNote;
 
-    audio.src = audios[noteIndex % 8]
+    audio.src = audios[NOTES[noteIndex].audio]
     audio.play();
+
+    userPlayedAudio[NOTES[noteIndex].column] = audios[NOTES[noteIndex].audio];
+    console.log('userPlayedAudio', userPlayedAudio);
 
     Object.entries(NOTES).forEach(
       ([key, note]) => {
@@ -64,7 +73,7 @@ function App() {
     audio.src = audios[0]
     audio.play();
     audio.onended = function () {
-      if (index < userClickedNotes.length) {
+      if (index < userPlayedAudio.length) {
         //TODO: Uncomment this when all audios are added 
         audio.src = audios[userClickedNotes[index].index % 8]
         // audio.src = audios[0]
@@ -88,13 +97,14 @@ function App() {
         <source src={sound1} />
       </audio>
       <div className='wrapper'>
-      <p style={{position:'fixed', zIndex:'1000', fontSize:'smaller', paddingTop: '30px'}}>NOTE: Add Notes left to right</p>
+      {/* <p style={{position:'fixed', zIndex:'1000', fontSize:'smaller', paddingTop: '30px'}}>NOTE: Add Notes left to right</p> */}
         <div className='nodeboxesHolder'>
           <img id='music' src='/note.png' alt='musicIcon' />
+        <hr style={{marginTop: '-53px'}}/><hr style={{marginTop: '-36px'}}/><hr style={{marginTop: '-19px'}}/><hr style={{marginTop: '-1px'}}/><hr style={{marginTop: '17px'}}/>
           <div className='stringsWrapper'>
             {notes.map((note, i) => {
               console.log("check",NOTES[i])
-              return <Note ref={ChildRef} index={i} note={NOTES[i]} addNote={addNote} removeNote={removeNote} onClick={() => { new Audio(sound2).play(); }} />
+              return <Note ref={ChildRef} index={i} note={NOTES[i]} addNote={addNote} removeNote={removeNote} setPitchText={setPitchText} onClick={() => { new Audio(sound2).play(); }} />
             })}
           </div>
         </div>
@@ -103,11 +113,15 @@ function App() {
             <button className='delete-button' onClick={() => { userClickedNotes = []; window.location.reload(false); }}>🗑️</button>
             <button className='play-button' onClick={playAllNotes}>▷ </button>
           </div>
+          <div className='pitchDisplay'><span>{pitchText}</span></div>
           <div>
             <button className='harmonize-button'>Harmonize</button>
           </div>
         </div>
       </div>
+      <div className='createdBy'> Created By
+      </div>
+      <div className='tooltiptext'> <span>Srish Kulkarni</span><span>Srish Kulkarni</span><span>Srish Kulkarni</span><span>Srish Kulkarni</span></div>
     </div>
   );
 }

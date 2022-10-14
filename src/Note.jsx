@@ -1,7 +1,5 @@
 import React, {useEffect, useState, forwardRef, useImperativeHandle} from "react";
 
-import {notesData} from './data';
-
 const Note = forwardRef((props, ref) => {
 
     const [popNoteIcon, SetPopNoteIcon] = useState(false);
@@ -31,8 +29,13 @@ const Note = forwardRef((props, ref) => {
     return (<>
         <div style={{ display: "flex" }}>
             {/* {props.index} */}
-            <div className={`nodeBox ${props.index>79 ? 'bottom-border': ''} ${props.index<16? 'border-top': ''} ${props.index>79 ? 'top-border': ''} `} onClick={popNoteIconTrigger}>
-                { popNoteIcon && <img className='musical-note' src='/musical-note.png' />}
+            <div className={`nodeBox ${props.index>79 ? 'bottom-border': ''} ${props.index<16? 'border-top': ''} ${props.index>55 ? 'top-border': ''} `}
+             onClick={popNoteIconTrigger}
+              onMouseOver={() => { props.setPitchText(props.index)}}
+              onMouseOut= {() => { props.setPitchText('')}}
+              >
+        
+                { popNoteIcon && <img className='musical-note' src='/musical-note.png' alt="" />}
             </div>
         </div>
     </>);
