@@ -1,530 +1,794 @@
-export const notesData = {
-    0: {
+export const notesData = [
+    {
         index: 0,
         active: false,
         column: 0,
-        audio: '1'
+        audio: 1,
+        endTime: 46753,
+        pitchName: 'A',
+        pitch: 67,
     },
-    1: {
+    {
         index: 1,
         active: false,
         column: 1,
-        audio: '1'
+        audio: '1',
+        endTime: 46753,
+        pitchName: 'A',
+        pitch: 67,
     },
-    2: {
+    {
         index: 2,
         active: false,
         column: 2,
-        audio: '1'
+        audio: '1',
+        endTime: 46753,
+        pitchName: 'A',
+        pitch: 67,
     },
-    3: {
+    {
         index: 3,
         active: false,
         column: 3,
-        audio: '1'
+        audio: '1',
+        endTime: 46753,
+        pitchName: 'A',
+        pitch: 67,
     },
-    4: {
+    {
         index: 4,
         active: false,
         column: 4,
-        audio: '1'
+        audio: '1',
+        endTime: 46753,
+        pitchName: 'A',
+        pitch: 67,
     },
-    5: {
+    {
         index: 5,
         active: false,
         column: 5,
-        audio: '1'
+        audio: '1',
+        endTime: 46753,
+        pitchName: 'A',
+        pitch: 67,
     },
-    6: {
+    {
         index: 6,
         active: false,
         column: 6,
-        audio: '1'
+        audio: '1',
+        endTime: 46753,
+        pitchName: 'A',
+        pitch: 67,
     },
-    7: {
+    {
         index: 7,
         active: false,
         column: 7,
-        audio: '1'
+        audio: '1',
+        endTime: 46753,
+        pitchName: 'A',
+        pitch: 67,
     },
-    8: {
+    {
         index: 8,
         active: false,
         column: 0,
-        audio: '2'
+        audio: '2',
+        endTime: 46753,
+        pitchName: 'A',
+        pitch: 67,
     },
-    9: {
+    {
         index: 9,
         active: false,
         column: 1,
-        audio: '2'
+        audio: '2',
+        endTime: 46753,
+        pitchName: 'A',
+        pitch: 67,
     },
-    10: {
+    {
         index: 10,
         active: false,
         column: 2,
-        audio: '2'
+        audio: '2',
+        endTime: 46753,
+        pitchName: 'A',
+        pitch: 67,
     },
-    11: {
+    {
         index: 11,
         active: false,
         column: 3,
-        audio: '2'
+        audio: '2',
+        endTime: 46753,
+        pitchName: 'A',
+        pitch: 67,
     },
-    12: {
+    {
         index: 12,
         active: false,
         column: 4,
-        audio: '2'
+        audio: '2',
+        endTime: 46753,
+        pitchName: 'A',
+        pitch: 67,
     },
-    13: {
+    {
         index: 13,
         active: false,
         column: 5,
-        audio: '2'
+        audio: '2',
+        endTime: 46753,
+        pitchName: 'A',
+        pitch: 67,
     },
-    14: {
+    {
         index: 14,
         active: false,
         column: 6,
-        audio: '2'
+        audio: '2',
+        endTime: 46753,
+        pitchName: 'A',
+        pitch: 67,
     },
-    15: {
+    {
         index: 15,
         active: false,
         column: 7,
-        audio: '2'
+        audio: '2',
+        endTime: 46753,
+        pitchName: 'A',
+        pitch: 67,
     },
-    16: {
+    {
         index: 16,
         active: false,
         column: 0,
-        audio: '3'
+        audio: '3',
+        endTime: 46753,
+        pitchName: 'A',
+        pitch: 67,
     },
-    17: {
+    {
         index: 17,
         active: false,
         column: 1,
-        audio: '3'
+        audio: '3',
+        endTime: 46753,
+        pitchName: 'A',
+        pitch: 67,
     },
-    18: {
+    {
         index: 18,
         active: false,
-        column:2,
-        audio: '3'
+        column: 2,
+        audio: '3',
+        endTime: 46753,
+        pitchName: 'A',
+        pitch: 67,
     },
-    19: {
+    {
         index: 19,
         active: false,
         column: 3,
-        audio: '3'
+        audio: '3',
+        endTime: 46753,
+        pitchName: 'A',
+        pitch: 67,
     },
-    20: {
+    {
         index: 19,
         active: false,
         column: 4,
-        audio: '3'
+        audio: '3',
+        endTime: 46753,
+        pitchName: 'A',
+        pitch: 67,
     },
-    21: {
+    {
         index: 21,
         active: false,
         column: 5,
-        audio: '3'
+        audio: '3',
+        endTime: 46753,
+        pitchName: 'A',
+        pitch: 67,
     },
-    22: {
+    {
         index: 22,
         active: false,
         column: 6,
-        audio: '3'
+        audio: '3',
+        endTime: 46753,
+        pitchName: 'A',
+        pitch: 67,
     },
-    23: {
+    {
         index: 23,
         active: false,
         column: 7,
-        audio: '3'
+        audio: '3',
+        endTime: 46753,
+        pitchName: 'A',
+        pitch: 67,
     },
-    24: {
+    {
         index: 24,
         active: false,
         column: 0,
-        audio: '4'
+        audio: '4',
+        endTime: 46753,
+        pitchName: 'A',
+        pitch: 67,
     },
-    25: {
+    {
         index: 25,
         active: false,
         column: 1,
-        audio: '4'
+        audio: '4',
+        endTime: 46753,
+        pitchName: 'A',
+        pitch: 67,
     },
-    26: {
+    {
         index: 26,
         active: false,
         column: 2,
-        audio: '4'
+        audio: '4',
+        endTime: 46753,
+        pitchName: 'A',
+        pitch: 67,
     },
-    27: {
+    {
         index: 27,
         active: false,
         column: 3,
-        audio: '4'
+        audio: '4',
+        endTime: 46753,
+        pitchName: 'A',
+        pitch: 67,
     },
-    28: {
+    {
         index: 28,
         active: false,
         column: 4,
-        audio: '4'
+        audio: '4',
+        endTime: 46753,
+        pitchName: 'A',
+        pitch: 67,
     },
-    29: {
+    {
         index: 29,
         active: false,
         column: 5,
-        audio: '4'
+        audio: '4',
+        endTime: 46753,
+        pitchName: 'A',
+        pitch: 67,
     },
-    30: {
+    {
         index: 30,
         active: false,
         column: 6,
-        audio: '4'
+        audio: '4',
+        endTime: 46753,
+        pitchName: 'A',
+        pitch: 67,
     },
-    31: {
+    {
         index: 31,
         active: false,
         column: 7,
-        audio: '4'
+        audio: '4',
+        endTime: 46753,
+        pitchName: 'A',
+        pitch: 67,
     },
-    32: {
+    {
         index: 32,
         active: false,
         column: 0,
-        audio: '5'
+        audio: '5',
+        endTime: 46753,
+        pitchName: 'A',
+        pitch: 67,
     },
-    33: {
+    {
         index: 33,
         active: false,
         column: 1,
-        audio: '5'
+        audio: '5',
+        endTime: 46753,
+        pitchName: 'A',
+        pitch: 67,
     },
-    34: {
+    {
         index: 34,
         active: false,
         column: 2,
-        audio: '5'
+        audio: '5',
+        endTime: 46753,
+        pitchName: 'A',
+        pitch: 67,
     },
-    35: {
+    {
         index: 35,
         active: false,
         column: 3,
-        audio: '5'
+        audio: '5',
+        endTime: 46753,
+        pitchName: 'A',
+        pitch: 67,
     },
-    36: {
+    {
         index: 36,
         active: false,
         column: 4,
-        audio: '5'
+        audio: '5',
+        endTime: 46753,
+        pitchName: 'A',
+        pitch: 67,
     },
-    37: {
+    {
         index: 37,
         active: false,
         column: 5,
-        audio: '5'
+        audio: '5',
+        endTime: 46753,
+        pitchName: 'A',
+        pitch: 67,
     },
-    38: {
+    {
         index: 38,
         active: false,
         column: 6,
-        audio: '5'
+        audio: '5',
+        endTime: 46753,
+        pitchName: 'A',
+        pitch: 67,
     },
-    39: {
+    {
         index: 39,
         active: false,
         column: 7,
-        audio: '5'
+        audio: '5',
+        endTime: 46753,
+        pitchName: 'A',
+        pitch: 67,
     },
-    40: {
+    {
         index: 49,
         active: false,
         column: 0,
-        audio: '6'
+        audio: '6',
+        endTime: 46753,
+        pitchName: 'A',
+        pitch: 67,
     },
-    41: {
+    {
         index: 41,
         active: false,
         column: 1,
-        audio: '6'
+        audio: '6',
+        endTime: 46753,
+        pitchName: 'A',
+        pitch: 67,
     },
-    42: {
+    {
         index: 42,
         active: false,
         column: 2,
-        audio: '6'
+        audio: '6',
+        endTime: 46753,
+        pitchName: 'A',
+        pitch: 67,
     },
-    43: {
+    {
         index: 43,
         active: false,
         column: 3,
-        audio: '6'
+        audio: '6',
+        endTime: 46753,
+        pitchName: 'A',
+        pitch: 67,
     },
-    44: {
+    {
         index: 44,
         active: false,
         column: 4,
-        audio: '6'
+        audio: '6',
+        endTime: 46753,
+        pitchName: 'A',
+        pitch: 67,
     },
-    45: {
+    {
         index: 45,
         active: false,
         column: 5,
-        audio: '6'
+        audio: '6',
+        endTime: 46753,
+        pitchName: 'A',
+        pitch: 67,
     },
-    46: {
+    {
         index: 46,
         active: false,
         column: 6,
-        audio: '6'
+        audio: '6',
+        endTime: 46753,
+        pitchName: 'A',
+        pitch: 67,
     },
-    47: {
+    {
         index: 47,
         active: false,
         column: 7,
-        audio: '6'
+        audio: '6',
+        endTime: 46753,
+        pitchName: 'A',
+        pitch: 67,
     },
-    48: {
+    {
         index: 48,
         active: false,
         column: 0,
-        audio: '7'
+        audio: '7',
+        endTime: 46753,
+        pitchName: 'A',
+        pitch: 67,
     },
-    49: {
+    {
         index: 49,
         active: false,
         column: 1,
-        audio: '7'
+        audio: '7',
+        endTime: 46753,
+        pitchName: 'A',
+        pitch: 67,
     },
-    50: {
+    {
         index: 50,
         active: false,
         column: 2,
-        audio: '7'
+        audio: '7',
+        endTime: 46753,
+        pitchName: 'A',
+        pitch: 67,
     },
-    51: {
+    {
         index: 51,
         active: false,
         column: 3,
-        audio: '7'
+        audio: '7',
+        endTime: 46753,
+        pitchName: 'A',
+        pitch: 67,
     },
-    52: {
+    {
         index: 52,
         active: false,
         column: 4,
-        audio: '7'
+        audio: '7',
+        endTime: 46753,
+        pitchName: 'A',
+        pitch: 67,
     },
-    53: {
+    {
         index: 53,
         active: false,
         column: 5,
-        audio: '7'
+        audio: '7',
+        endTime: 46753,
+        pitchName: 'A',
+        pitch: 67,
     },
-    54: {
+    {
         index: 54,
         active: false,
         column: 6,
-        audio: '7'
+        audio: '7',
+        endTime: 46753,
+        pitchName: 'A',
+        pitch: 67,
     },
-    55: {
+    {
         index: 55,
         active: false,
         column: 7,
-        audio: '7'
+        audio: '7',
+        endTime: 46753,
+        pitchName: 'A',
+        pitch: 67,
     },
-    56: {
+    {
         index: 56,
         active: false,
         column: 0,
-        audio: '8'
+        audio: '8',
+        endTime: 46753,
+        pitchName: 'A',
+        pitch: 67,
     },
-    57: {
+    {
         index: 57,
         active: false,
         column: 1,
-        audio: '8'
+        audio: '8',
+        endTime: 46753,
+        pitchName: 'A',
+        pitch: 67,
     },
-    58: {
+    {
         index: 58,
         active: false,
         column: 2,
-        audio: '8'
+        audio: '8',
+        endTime: 46753,
+        pitchName: 'A',
+        pitch: 67,
     },
-    59: {
+    {
         index: 59,
         active: false,
         column: 3,
-        audio: '8'
+        audio: '8',
+        endTime: 46753,
+        pitchName: 'A',
+        pitch: 67,
     },
-    60: {
+    {
         index: 69,
         active: false,
         column: 4,
-        audio: '8'
+        audio: '8',
+        endTime: 46753,
+        pitchName: 'A',
+        pitch: 67,
     },
-    61: {
+    {
         index: 61,
         active: false,
         column: 5,
-        audio: '8'
+        audio: '8',
+        endTime: 46753,
+        pitchName: 'A',
+        pitch: 67,
     },
-    62: {
+    {
         index: 62,
         active: false,
         column: 6,
-        audio: '8'
+        audio: '8',
+        endTime: 46753,
+        pitchName: 'A',
+        pitch: 67,
     },
-    63: {
+    {
         index: 63,
         active: false,
         column: 7,
-        audio: '8'
+        audio: '8',
+        endTime: 46753,
+        pitchName: 'A',
+        pitch: 67,
     },
-    64: {
+    {
         index: 64,
         active: false,
         column: 0,
-        audio: '9'
+        audio: '9',
+        endTime: 46753,
+        pitchName: 'A',
+        pitch: 67,
     },
-    65: {
+    {
         index: 65,
         active: false,
         column: 1,
-        audio: '9'
+        audio: '9',
+        endTime: 46753,
+        pitchName: 'A',
+        pitch: 67,
     },
-    66: {
+    {
         index: 66,
         active: false,
         column: 2,
-        audio: '9'
+        audio: '9',
+        endTime: 46753,
+        pitchName: 'A',
+        pitch: 67,
     },
-    67: {
+    {
         index: 67,
         active: false,
         column: 3,
-        audio: '9'
+        audio: '9',
+        endTime: 46753,
+        pitchName: 'A',
+        pitch: 67,
     },
-    68: {
+    {
         index: 68,
         active: false,
         column: 4,
-        audio: '9'
+        audio: '9',
+        endTime: 46753,
+        pitchName: 'A',
+        pitch: 67,
     },
-    69: {
+    {
         index: 69,
         active: false,
         column: 5,
-        audio: '9'
+        audio: '9',
+        endTime: 46753,
+        pitchName: 'A',
+        pitch: 67,
     },
-    70: {
+    {
         index: 70,
         active: false,
         column: 6,
-        audio: '9'
+        audio: '9',
+        endTime: 46753,
+        pitchName: 'A',
+        pitch: 67,
     },
-    71: {
+    {
         index: 71,
         active: false,
         column: 7,
-        audio: '9'
+        audio: '9',
+        endTime: 46753,
+        pitchName: 'A',
+        pitch: 67,
     },
-    72: {
+    {
         index: 72,
         active: false,
         column: 0,
-        audio: '10'
+        audio: '10',
+        endTime: 46753,
+        pitchName: 'A',
+        pitch: 67,
     },
-    73: {
+    {
         index: 73,
         active: false,
         column: 1,
-        audio: '10'
+        audio: '10',
+        endTime: 46753,
+        pitchName: 'A',
+        pitch: 67,
     },
-    74: {
+    {
         index: 74,
         active: false,
         column: 2,
-        audio: '10'
+        audio: '10',
+        endTime: 46753,
+        pitchName: 'A',
+        pitch: 67,
     },
-    75: {
+    {
         index: 75,
         active: false,
         column: 3,
-        audio: '10'
+        audio: '10',
+        endTime: 46753,
+        pitchName: 'A',
+        pitch: 67,
     },
-    76: {
+    {
         index: 76,
         active: false,
         column: 4,
-        audio: '10'
+        audio: '10',
+        endTime: 46753,
+        pitchName: 'A',
+        pitch: 67,
     },
-    77: {
+    {
         index: 77,
         active: false,
         column: 5,
-        audio: '10'
+        audio: '10',
+        endTime: 46753,
+        pitchName: 'A',
+        pitch: 67,
     },
-    78: {
+    {
         index: 78,
         active: false,
         column: 6,
-        audio: '10'
+        audio: '10',
+        endTime: 46753,
+        pitchName: 'A',
+        pitch: 67,
     },
-    79: {
+    {
         index: 79,
         active: false,
         column: 7,
-        audio: '10'
+        audio: '10',
+        endTime: 46753,
+        pitchName: 'A',
+        pitch: 67,
     },
-    80: {
+    {
         index: 89,
         active: false,
         column: 0,
-        audio: '11'
+        audio: '11',
+        endTime: 46753,
+        pitchName: 'A',
+        pitch: 67,
     },
-    81: {
+    {
         index: 81,
         active: false,
         column: 1,
-        audio: '11'
+        audio: '11',
+        endTime: 46753,
+        pitchName: 'A',
+        pitch: 67,
     },
-    82: {
+    {
         index: 82,
         active: false,
         column: 2,
-        audio: '11'
+        audio: '11',
+        endTime: 46753,
+        pitchName: 'A',
+        pitch: 67,
     },
-    83: {
+    {
         index: 83,
         active: false,
         column: 3,
-        audio: '11'
+        audio: '11',
+        endTime: 46753,
+        pitchName: 'A',
+        pitch: 67,
     },
-    84: {
+    {
         index: 84,
         active: false,
         column: 4,
-        audio: '11'
+        audio: '11',
+        endTime: 46753,
+        pitchName: 'A',
+        pitch: 67,
     },
-    85: {
+    {
         index: 85,
         active: false,
         column: 5,
-        audio: '11'
+        audio: '11',
+        endTime: 46753,
+        pitchName: 'A',
+        pitch: 67,
     },
-    86: {
+    {
         index: 86,
         active: false,
         column: 6,
-        audio: '11'
+        audio: '11',
+        endTime: 46753,
+        pitchName: 'A',
+        pitch: 67,
     },
-    87: {
+    {
         index: 87,
         active: false,
         column: 7,
-        audio: '11'
+        audio: '11',
+        endTime: 46753,
+        pitchName: 'A',
+        pitch: 67,
     }
-}
+]

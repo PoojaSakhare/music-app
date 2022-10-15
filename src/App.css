@@ -44,7 +44,8 @@
     
 }
 .nodeBox:hover {
-   background-color: #1110102b ;
+    background-color: #11101096;
+    border-radius: 10px;
 }
 
 .nodeboxesHolder{
@@ -101,6 +102,10 @@
     text-align: center;
     font-weight: 700;
     cursor: pointer;
+}
+.play-button:active, .delete-button:active, .harmoize-button:active {
+    transform: scale(0.99);
+    transition: transform 1s;
 }
 
 .play-button {

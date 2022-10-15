@@ -1,5 +1,5 @@
 import React, {useEffect, useState, forwardRef, useImperativeHandle} from "react";
-
+import store from "./store";
 const Note = forwardRef((props, ref) => {
 
     const [popNoteIcon, SetPopNoteIcon] = useState(false);
@@ -35,7 +35,7 @@ const Note = forwardRef((props, ref) => {
               onMouseOut= {() => { props.setPitchText('')}}
               >
         
-                { popNoteIcon && <img className='musical-note' src='/musical-note.png' alt="" />}
+                { store.getState().allNoteReducer[props.index].active && popNoteIcon && <img className='musical-note' src='/musical-note.png' alt="" />}
             </div>
         </div>
     </>);
