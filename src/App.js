@@ -5,17 +5,21 @@ import store from './store';
 import * as actions from './actions'
 
 import Note from './Note';
-import sound0 from './samples/G3.ogg'
-import sound1 from './samples/D3.mp3'
-import sound2 from './samples/D3.ogg'
-import sound3 from './samples/E2.mp3'
-import sound4 from './samples/E2.ogg'
-import sound5 from './samples/E4.mp3'
-import sound6 from './samples/E4.ogg'
-import sound7 from './samples/G3.mp3'
-import sound8 from './samples/G3.ogg'
-import sound9 from './samples/G3.ogg'
-import sound10 from './samples/G3.ogg'
+import sound0 from './samples/1A.mp3'
+import sound1 from './samples/2G.mp3'
+import sound2 from './samples/3F.mp3'
+import sound3 from './samples/4E.mp3'
+import sound4 from './samples/5D.mp3'
+import sound5 from './samples/6C.mp3'
+import sound6 from './samples/7B.mp3'
+import sound7 from './samples/8A.mp3'
+import sound8 from './samples/9G.mp3'
+import sound9 from './samples/10F.mp3'
+import sound10 from './samples/11E.mp3'
+import sound11 from './samples/12D.mp3'
+import sound12 from './samples/13C.mp3'
+import sound13 from './samples/14B.mp3'
+import sound14 from './samples/15A.mp3'
 
 
 const NOTES = notesData;
@@ -23,8 +27,8 @@ const NOTES = notesData;
 function App() {
   const ChildRef = useRef();
   const audioRef = useRef();
-  const notes = [...Array(88).keys()];
-  const audios = [sound0, sound1, sound2, sound3, sound4, sound5, sound6, sound7, sound8, sound9, sound10]
+  const notes = [...Array(120).keys()];
+  const audios = [sound0, sound1, sound2, sound3, sound4, sound5, sound6, sound7, sound8, sound9, sound10,  sound11, sound12, sound13, sound14]
 
   const [pitchText, setPitchText] = useState('');
 
@@ -104,13 +108,13 @@ function App() {
           transform: 'rotate(90deg)', position: 'absolute',
           height: '2px',
           background: 'black',
-          width: '98px',
-          marginTop: '-139px',
+          width: '70px',
+          marginTop: '-158px',
           marginRight: '-106px'
         }}></div>
        <div className='nodeboxesHolder'>
           <img id='music' src='/note.png' alt='musicIcon' />
-        <hr style={{marginTop: '-53px'}}/><hr style={{marginTop: '-36px'}}/><hr style={{marginTop: '-19px'}}/><hr style={{marginTop: '-1px'}}/><hr style={{marginTop: '17px'}}/>
+        <hr style={{marginTop: '-79px'}}/><hr style={{marginTop: '-43px'}}/><hr style={{marginTop: '-11px'}}/><hr style={{marginTop: '27px'}}/><hr style={{marginTop: '62px'}}/>
         
           <div className='stringsWrapper'>
             {notes.map((note, i) => {
