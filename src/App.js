@@ -5,6 +5,7 @@ import store from './store';
 import * as actions from './actions'
 
 import Note from './Note';
+import sound0 from './samples/G3.ogg'
 import sound1 from './samples/D3.mp3'
 import sound2 from './samples/D3.ogg'
 import sound3 from './samples/E2.mp3'
@@ -15,7 +16,7 @@ import sound7 from './samples/G3.mp3'
 import sound8 from './samples/G3.ogg'
 import sound9 from './samples/G3.ogg'
 import sound10 from './samples/G3.ogg'
-import sound11 from './samples/G3.ogg'
+
 
 const NOTES = notesData;
 
@@ -23,7 +24,7 @@ function App() {
   const ChildRef = useRef();
   const audioRef = useRef();
   const notes = [...Array(88).keys()];
-  const audios = [sound1, sound2, sound3, sound4, sound5, sound6, sound7, sound8, sound9, sound10, sound11]
+  const audios = [sound0, sound1, sound2, sound3, sound4, sound5, sound6, sound7, sound8, sound9, sound10]
 
   const [pitchText, setPitchText] = useState('');
 
