@@ -32,26 +32,37 @@ function App() {
 
   const [pitchText, setPitchText] = useState('');
 
-  let userClickedNotes = [];
-
   const addNote = (noteIndex) => {
 
-    //Play clicked audio
     audio.src = audios[Number(store.getState().allNoteReducer[noteIndex].audio)]
+    let audioDuration = 0
+
+    //Play clicked audio
     audio.play();
+
+    //Get Audio Duration
+    audio.addEventListener('loadedmetadata', (e) => {
+      console.log(e.target.duration);
+      audioDuration = e.target.duration;
+      console.log('step 1');
+      // audio.playbackRate = 2;
+
+      //Add new note
+      store.dispatch({
+        type: actions.ADDED,
+        payload: {
+          note: store.getState().allNoteReducer[noteIndex],
+          duration: audioDuration
+        }
+      })
+      console.log('duration step 2', audioDuration )
+    });
 
     // Remove all existing same column clicks
     store.getState().allNoteReducer.map(note => {
       if(note.column === store.getState().allNoteReducer[noteIndex].column && note.active === true ) { console.log('found'); removeNote(note.index)}
     })
 
-    //Add new note
-    store.dispatch({
-      type: actions.ADDED,
-      payload:{
-        note: store.getState().allNoteReducer[noteIndex]
-      }
-    })
   }
 
   const removeNote = (noteIndex) => {
@@ -64,22 +75,45 @@ function App() {
     })
   }
 
-  //Sort sequence and play all notes
   const playAllNotes = () => {
+    //Sort before play
+    store.dispatch({
+      type: actions.SORT
+    })
     const audioHolder = store.getState().userClickedNoteReducer;
-    audioHolder.sort((a, b) => a.column - b.column)
+    console.log("audioholder", audioHolder[0].duration)
+
     let index = 1;
     //TODO: Add Silent sound to get started
+    //Play first sound and add start/end time
     var audio = new Audio();
     audio.src = audios[0]
     audio.play();
+    store.dispatch({
+      type: actions.SET_START_END_TIME,
+      payload: {
+        duration: audioHolder[0].duration
+      }
+    })
+
+    //Play Remaining audio and add start/end time
     audio.onended = function () {
       if (index < audioHolder.length) {
+        console.log("before dispatch");
+        store.dispatch({
+          type: actions.SET_START_END_TIME,
+          payload: {
+            duration: audioHolder[index].duration
+          }
+        })
+        console.log("after dispatch");
         audio.src = audios[Number(audioHolder[index].audio)]
         audio.play();
         index++;
       }
     };
+
+    console.log("after play",store.getState().userClickedNoteReducer )
   }
 
   const deleteAllNotes = () => {
@@ -87,6 +121,7 @@ function App() {
     store.dispatch({
       type: actions.DELETE
     })
+    //TODO:Get rid of reload
     if(window) window.location.reload();
   }
 
@@ -118,7 +153,7 @@ function App() {
         
           <div className='stringsWrapper'>
             {notes.map((note, i) => {
-              return <Note ref={ChildRef} index={i} note={NOTES[i]} addNote={addNote} removeNote={removeNote} setPitchText={setPitchText} onClick={() => { new Audio(sound2).play(); }} />
+              return <Note key={i} ref={ChildRef} index={i} note={NOTES[i]} addNote={addNote} removeNote={removeNote} setPitchText={setPitchText} onClick={() => { new Audio(sound2).play(); }} />
             })}
           </div>
         </div>
